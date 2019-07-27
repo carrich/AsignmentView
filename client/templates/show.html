@@ -36,11 +36,12 @@
 								0 Comment
 							</a>
 						</div>
+						<div ng-repeat="x in artical.images">
 
-						<div class="wrap-pic-max-w p-b-30">
-							<img src="images/blog-list-01.jpg" alt="IMG">
+						<div  class="wrap-pic-max-w p-b-30">
+							<img src="{{x.link}}" alt="IMG">
 						</div>
-
+						</div>
 						<p class="f1-s-11 cl6 p-b-25">
 							{{artical.content}}
 						</p>

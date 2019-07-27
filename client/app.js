@@ -21,9 +21,13 @@ myApp.config(function($routeProvider){
 			templateUrl:'templates/edit.html',
 			controller:'empController'
 		})
-		.when('/employees/:id/show', {
+		.when('/employees/:catId/:id/show', {
 			templateUrl:'templates/show.html',
 			controller:'empController'
-		});
+		})
+		.when('/employees/:id', {
+		templateUrl:'templates/new.html',
+		controller:'empController'
+	});
 });
 //
