@@ -7,7 +7,7 @@
                     <div class="m-t--40 p-b-40">
                         <!-- Item post -->
                         <!--                        <div ng-repeat="x in employees">-->
-                        <div dir-paginate="x in articals|itemsPerPage:5">
+                        <div ng-if="x.images.length != 0" dir-paginate="x in articals|itemsPerPage:5">
                             <div class="flex-wr-sb-s p-t-40 p-b-15 how-bor2">
                                 <a href="blog-detail-02.html" class="size-w-8 wrap-pic-w hov1 trans-03 w-full-sr575 m-b-25">
                                     <img src="{{x.images[0].link}}" alt="IMG">

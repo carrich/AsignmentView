@@ -1,4 +1,3 @@
-
 <section class="bg0 p-b-55" ng-init="getEmployees()">
     <div class="container">
         <div class="row justify-content-center">
@@ -6,54 +5,60 @@
                 <div class="p-r-10 p-r-0-sr991">
                     <div class="m-t--40 p-b-40">
                         <!-- Item post -->
-                        <!--                        <div ng-repeat="x in employees">-->
-                        <div dir-paginate="x in articals|itemsPerPage:5">
-                            <div class="flex-wr-sb-s p-t-40 p-b-15 how-bor2">
-                                <a href="blog-detail-02.html" class="size-w-8 wrap-pic-w hov1 trans-03 w-full-sr575 m-b-25">
-                                    <img src="{{x.images[0].link}}" alt="IMG">
-                                </a>
+<!--                                                <div ng-repeat="x in employees">-->
+                        <div ng-if="x.images.length != 0" dir-paginate="x in articals|itemsPerPage:5" >
 
-                                <div class="size-w-9 w-full-sr575 m-b-25">
-                                    <h5 class="p-b-12" style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-                                        <a href="blog-detail-02.html" class="f1-l-1 cl2 hov-cl10 trans-03 respon2">
-                                            {{x.title}}
-                                        </a>
-                                    </h5>
+<!--                            <div ng-if="x.images.length != 0">-->
+                                <div class="flex-wr-sb-s p-t-40 p-b-15 how-bor2">
+                                    <a href="blog-detail-02.html"
+                                       class="size-w-8 wrap-pic-w hov1 trans-03 w-full-sr575 m-b-25">
+                                        <img src="{{x.images[0].link}}" alt="IMG">
+                                    </a>
 
-                                    <div class="cl8 p-b-18">
-                                        <a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
-                                            by {{x.author}}
-                                        </a>
+                                    <div class="size-w-9 w-full-sr575 m-b-25">
+                                        <h5 class="p-b-12"
+                                            style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
+                                            <a href="blog-detail-02.html" class="f1-l-1 cl2 hov-cl10 trans-03 respon2">
+                                                {{x.title}}
+                                            </a>
+                                        </h5>
 
-                                        <span class="f1-s-3 m-rl-3">
+                                        <div class="cl8 p-b-18">
+                                            <a href="#" class="f1-s-4 cl8 hov-cl10 trans-03">
+                                                by {{x.author}}
+                                            </a>
+
+                                            <span class="f1-s-3 m-rl-3">
 											-
 										</span>
 
-                                        <span class="f1-s-3">
+                                            <span class="f1-s-3">
 											{{x.createdAt}}
 										</span>
+                                        </div>
+<!--                                        <p class="f1-s-1 cl6 p-b-24">-->
+<!--                                            {{x.images.length}}-->
+<!--                                        </p>-->
+
+
+                                        <p class="f1-s-1 cl6 p-b-24">
+                                            {{x.description}}
+                                        </p>
+
+
+                                        <a href="#/employees/{{x.catId}}/{{x.id}}/show"
+                                           class="f1-s-1 cl9 hov-cl10 trans-03"> Read More <i
+                                                class="m-l-2 fa fa-long-arrow-alt-right"></i></a>
+
+
+                                        </a>
                                     </div>
-
-                                    <p class="f1-s-1 cl6 p-b-24">
-                                        {{x.description}}
-                                    </p>
-
-
-                                    <a href="#/employees/{{x.catId}}/{{x.id}}/show" class="f1-s-1 cl9 hov-cl10 trans-03">  Read More  <i class="m-l-2 fa fa-long-arrow-alt-right"></i></a>
-
-
-
-
-
-                                    </a>
                                 </div>
                             </div>
-                        </div>
 
 
 
-
-
+<!--                        </div>-->
 
 
                     </div>
@@ -85,7 +90,8 @@
                         </p>
 
                         <form class="size-a-9 pos-relative">
-                            <input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="text" name="email" placeholder="Email">
+                            <input class="s-full f1-m-6 cl6 plh9 p-l-20 p-r-55" type="text" name="email"
+                                   placeholder="Email">
 
                             <button class="size-a-10 flex-c-c ab-t-r fs-16 cl9 hov-cl10 trans-03">
                                 <i class="fa fa-arrow-right"></i>
@@ -170,35 +176,43 @@
                         </div>
 
                         <div class="flex-wr-s-s m-rl--5">
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Fashion
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Lifestyle
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Denim
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Streetstyle
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Crafts
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Magazine
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 News
                             </a>
 
-                            <a href="#" class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
+                            <a href="#"
+                               class="flex-c-c size-h-2 bo-1-rad-20 bocl12 f1-s-1 cl8 hov-btn2 trans-03 p-rl-20 p-tb-5 m-all-5">
                                 Blogs
                             </a>
                         </div>
