@@ -3,13 +3,13 @@ myApp.controller('empController', function ($scope, $route, $routeParams, $http)
         $http.get('https://velvety-rookery-248023.appspot.com/api/v1/article?catId=1564183106610').then(function (response) {
             $scope.articals = response.data.data;
             console.log($scope.articals)
-            $scope.employee_names = []
-            angular.forEach(values, function (value, key) {
-             if (value.images.length>0){
-                 $scope.employee_names .push(value);
-             }
-            });
-            console.log($scope.employee_names)
+
+
+        });
+        $http.get('https://velvety-rookery-248023.appspot.com/api/v1/article?catId=1564183106610').then(function (response) {
+            $scope.articals1 = response.data.data;
+            console.log($scope.articals1)
+
 
         });
 
